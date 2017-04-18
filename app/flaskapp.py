@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 app = Flask(__name__)
-PORT = 5353
+PORT = 80
 DATA = []
 TIMESTAMP = []
 
@@ -15,7 +15,7 @@ def get_datapoint():
     TIMESTAMP.append(time.time())
 
 
-@app.route('/check')
+@app.route('/')
 def check():
     line1 = "Number of data points: {0}".format(len(DATA))
     if DATA and TIMESTAMP:
@@ -31,4 +31,4 @@ def check():
 
 if __name__ == '__main__':
     get_datapoint()
-    app.run(host='0.0.0.0', port=PORT, debug=True)
+    app.run()
