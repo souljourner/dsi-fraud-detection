@@ -82,3 +82,5 @@ There were a variety of methods we considered for scoring, from a technical stan
 From a business standpoint, we also wanted to consider the different valuations for different customers. As a result, we used a Customer Lifetime Value calculation to calculate lifetime value of each customer. We also assumed that our company, took 5% of the ticket sales as commission for sale. 
 
 ## Results
+
+As a result, we ended with a 99% AUC score and 98% accuracy using a Gradient Boosting Classifier. 
